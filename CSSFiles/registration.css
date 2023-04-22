@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.links > ul{
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.links > ul > li a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+}
+
+.links > ul > li a:hover{
+    color: orange;
+}
+
+#ham{
+    display: none;
+}
+
+form{
+    height: 70vh;
+    width: 100%;
+}
+
+
+/* STDLIST */
+.btn > button{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.display-con{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: .5s;
+}
+
+#close{
+    position: relative;
+    font-size: 50px;
+    color: black;
+    left: 95%;
+    top: 2%;
+    cursor: pointer;
+}
+.show{
+    transform: scale(1);
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .links{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: azure;
+        left: -100%;
+        transition: .5s;
+    }
+
+    .links > ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ham{
+        display: block;
+        font-size: 2rem;
+        z-index: 1;
+    }
+
+    .left{
+        left: 0;
+    }
+}
